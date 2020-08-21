@@ -8,9 +8,22 @@ This code is also complementary to https://github.com/cq615/Joint-Motion-Estimat
 
 ## Introduction
 
-Image registration is an ill-posed inverse problem which often requires regularisation on the solution space. In contrast to most of the current approaches which impose explicit regularisation terms such as smoothness, in this project we propose to implicitly learn biomechanics-informed regularisation. Such an approach can incorporate application-specific prior knowledge into deep learning based registration. Particularly, the proposed biomechanics-informed regularisation leverages a variational autoencoder (VAE) to learn a manifold for biomechanically plausible deformations and to implicitly capture their underlying properties via reconstructing biomechanical simulations. The learnt VAE regulariser then can be coupled with any deep learning based registration network to regularise the solution space to be biomechanically plausible. The proposed method is validated in the context of myocardial motion tracking.
+Image registration is an ill-posed inverse problem which often requires regularisation on the solution space. In contrast to most of the current approaches which impose explicit regularisation terms such as smoothness, in this project we propose to implicitly learn biomechanics-informed regularisation. Such an approach can incorporate application-specific prior knowledge into deep learning based registration. Particularly, the proposed biomechanics-informed regularisation leverages a variational autoencoder (VAE) to learn a manifold for biomechanically plausible deformations and to implicitly capture their underlying properties via reconstructing biomechanical simulations. The learnt VAE regulariser then can be coupled with any deep learning based registration network to regularise the solution space to be biomechanically plausible. The proposed method is validated in the context of myocardial motion tracking. 
+
+The toy dataset is borrowed from <https://acdc.creatis.insa-lyon.fr/description/databases.html>.
 
 ## Usage
+
+To train the VAE regulariser:
+
+  python VAE_regularisation.py
+
+----
+
+To train the registration network:
+
+  python main.py
+
 
 ## Citation and Acknowledgement
 If you use the code for your work, or if you found the code useful, please cite the following works:
